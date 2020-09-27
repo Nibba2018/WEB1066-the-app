@@ -11,7 +11,7 @@ script:
 
 after_success:
   - ./gradlew jacocoTestReport
-  - COVERAGE=0.35 ./gradlew test jacocoTestCoverageVerification
+  - COVERAGE=0.31 ./gradlew test jacocoTestCoverageVerification
   - find . -name jacocoTestReport.csv|xargs cat|awk -F',' '{print $3" "$4" "$5}'
 
 deploy:
